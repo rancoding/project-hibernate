@@ -6,7 +6,10 @@
     <class name="dao.Armazem" table="ARMAZEM" schema="PROJECTO" optimistic-lock="version">
         <id name="idarmazem" type="byte">
             <column name="IDARMAZEM" precision="2" scale="0" />
-            <generator class="assigned" />
+            <generator class="sequence-identity">
+                <!--//alterar manualmente para adicionar sequencia-->
+                <param name="sequence">BUILD_SEQ</param> 
+            </generator>
         </id>
         <many-to-one name="localidade" class="dao.Localidade" fetch="select">
             <column name="IDLOCALIDADE" precision="4" scale="0" not-null="true" />
