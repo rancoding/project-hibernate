@@ -44,7 +44,7 @@ public class HibernateGenericLibrary {
         }
         
         return new ArrayList<>();
-    } 
+    }
     
     /**
      * Saves an object on the database
